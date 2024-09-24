@@ -1,0 +1,408 @@
+<html>
+    <title>Login Page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<head>
+<style>
+    body{
+        background-color: rgb(216, 203, 213);
+    }
+    
+    .navbar-brand{
+        font-size: 50px;
+        padding-right: 1rem;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        word-spacing: 1px;
+    }
+    .hero{
+        background-image:url("sap.jpg");
+        background-image: transparent;
+        height: 100vh;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #about{
+  background: rgb(221, 180, 212) ;
+  background-size: 100%;
+  flex-direction: column;
+}
+#about h1{
+  font-weight: 800;
+  font-size: 30px;
+  color: rgb(15, 15, 13);
+}
+
+#about p{
+  color: darkred;
+ letter-spacing: 3px;
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+	.navbar{
+        background-color: rgb(250, 230, 205);
+        border-color: black;
+        border-width: 60px;
+        border-radius: 8rem;
+        position:sticky;
+    }
+    .text-center{
+            color: rgb(0, 17, 255);
+    }
+    .text-center h1{
+        font-size: 6rem;
+        font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 100px 0 30px 0;
+	color: mediumorchid;
+    text-decoration: double;
+    font-style: oblique;
+    }
+    .text-center p{
+    font-size: 4rem;
+    color: darkcyan;
+    
+}
+    .slider-area h2{
+	text-align: center;
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 60px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 100px 0 30px 0;
+	color: aliceblue;
+}
+
+.wrapper{
+	display: flex;
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	border-radius: 0px;
+	padding: 2.5rem;
+	background: white;
+}
+.item{
+	animation: animate 25s alternate linear infinite;
+}
+.container:hover .item{
+	animation-play-state: paused;
+}
+@keyframes animate{
+	0%{
+		transform:translate3d(0,0,0);
+	}
+	100%{
+		transform: translate3d(-1100px,0,0);
+	}
+}
+@media(max-width:767px){
+	.slider-area h2{
+		font-size: 30px;
+	}
+	.wrapper {
+		width: 95%;
+		border-radius: 0;
+		padding: 0;
+	}
+}
+.scroll-left {
+ height: 30px;	
+ overflow: hidden;
+ font-weight:700;
+ position: relative;
+ background: black;
+ color: yellow;
+ border: none;
+}
+	
+.scroll-left p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 30px;
+ text-align: center;
+ /* Starting position */
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ animation: scroll-left 30s linear infinite;
+	
+}
+	.scroll-left p:hover {
+    animation-play-state: paused;
+	}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+ 0%   {
+ transform: translateX(100%); 		
+ }
+ 100% {
+ transform: translateX(-100%); 
+ }
+}
+
+
+.section-title{
+  font-size:1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+.shop{
+  margin-top: 2rem;
+
+}
+.shop-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+  gap: 1.5rem;
+}
+
+.product-box:hover{
+  background: var(--bg-color);
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 8px 32px hsla(0.75,0.82,o.165,1);
+  transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+
+.product-img{
+  width:100%;
+  height:auto;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+
+}
+.product-title{
+  font-size: 1.1rem;
+font-weight: 600;
+color: rgb(5, 12, 17);
+text-transform: uppercase;
+margin-bottom: 0.8rem;
+
+}
+.price{
+  font-weight: 500;
+  color: #0e0d0d;
+}
+
+#contact{
+  position: relative;
+  size: contain;
+}
+#contact img{
+  height: 100%;
+}
+.box{
+  width: 100% !important;
+  margin-top: 5px;
+}
+
+
+#contact input{
+  margin: 10px 0px;
+}
+
+#contact textarea{
+  margin: 10px 0px;
+  color:black;
+}
+.btn-signin{
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem auto 0 auto;
+  padding: 12px 20px;
+  width: 50%;
+  text-align: center;
+  border: none;
+  background: var(--text-color);
+  color: var(--bg-color);
+  font-size: 1rem;
+  font-weight: 500;
+cursor: pointer;
+border-radius: 3rem;
+
+}
+.fot{
+width: 100%;
+background-color: black;
+
+}
+.fot h2{
+  color: aliceblue;
+  align-items: center;
+  font-style: oblique;
+  text-align: center;
+}
+</style>	
+<body>
+	<div class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container-fluid">
+            <img src="sa2.jfif" width="150" height="90">
+            <a class="navbar-brand text-dark" href="#"><b>Sapthagiri Matric Hr Sec School</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true">
+              <span class="navbar-tollger-icon"></span>  
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark" href="#Home"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active text-dark" href="#About"><b>About</b></a>
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark" href="#Achivement"><b>Achivement</b></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link active text-dark" href="#Contact"><b>Contact</b></a>
+                  </li>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-left"  scrollamount="5" >
+        <p>Welcome to Sapthagiri Matric Hr Sec School *** <font color=" #FF5733 "> Admission Open for the Academic Year 24-25</font> *** Accredited with GOV "A" Grade in the Overall Insistute***
+    </p>
+    </div>
+    
+</nav>
+<section class="hero">
+    <div class="text-center">
+    </div>
+    </section>
+    <section id="About">
+      <div class="container-fluid"> 
+        <div class="row">
+    
+      <div class=" col-lg-6 col-md-6 col-12 ">
+        <img src="about.jfif" class="img-fluid" >
+      </div>
+    
+    
+      <div class="col-lg-6 col-md-6 col-12 ">
+          <h1>ABOUT US </h1>
+          <p>The Beat the Microbead campaign was initiated by the esmBeeShoppy Foundation in 2012 to bring on the map the issue of microbead pollution through personal care products. Since the start of this campaign, we try to educate people about the problem and brainstorm steps that can be taken to Beat the Microbead!  
+    
+            Today, with the progress on the knowledge about plastic ingredients in cosmetics, we focus on raising awareness about all kind of microplastics used in cosmetics and personal care products. We try to attack the issue from all sides: by engaging people, cosmetic brands and governing institutions. With this campaign, our aim is to spread awareness, provide tools to consumers such as our Beat the Microbead app so that they make an informed choice and support solutions.  
+            
+            If you have any questions regarding our work, please feel free to contact us! </p>
+      </div>
+    
+    </div>
+    </div>
+    
+    </section>
+<section  id="Achivement">
+    <div class="container m-5">
+    <h2 class="text-center my-5">Make Student future Bright!!!!</h2>
+    <div class="row">   
+    <div class="shop-content">
+      <!-- box 1 -->
+      <div class="product-box">
+  
+        <img src="sap2.jfif" alt="" class="product-img">
+        <h2 class="product-title"><b><center>karate</b></center></h2>
+            <p>Karate is a Japanese martial art that originated on the island of Okinawa and is known for its striking techniques, blocking, and grappling: 
+                Origin</p>
+        
+        <span class="price" color="black">learn more</span>
+        <i class='bx bx-shopping-bag add-cart' ></i>
+      </div>
+      <!-- box 1 -->
+      <div class="product-box">
+  
+        <img src="sap6.jfif" alt="" class="product-img">
+        <h2 class="product-title"><b><center>Fancy Dress</b></center></h2>
+            <p>Fancy dress competitions are a fun way for students to learn and develop confidence while getting creative with their costumes. They can also help children develop empathy, emotional intelligence, and language skills.</p>
+        
+        <span class="price" color="black">learn more</span>
+        <i class='bx bx-shopping-bag add-cart' ></i>
+      </div>
+       <!-- box 1 -->
+       <div class="product-box">
+  
+        <img src="sap4.jfif" alt="" class="product-img">
+        <h2 class="product-title"><b><center>Sports Day</b></center></h2>
+            <p>Sports day competitions are events that are held in schools and colleges to encourage students to participate in sports and physical activities. They often include a variety of games and races, such as:
+              Football, Cricket, Throw ball, Dodge ball, Volleyball, Track and field, Basketball, Rope skipping, Kabaddi, and Table tennis.</p>
+        
+        <span class="price" color="black">learn more</span>
+        <i class='bx bx-shopping-bag add-cart' ></i>
+      </div>
+       <!-- box 1 -->
+       <div class="product-box">
+  
+        <img src="sap3.jfif" alt="" class="product-img">
+        <h2 class="product-title"><b><center>Womens Day</b></center></h2>
+            <p>There are several types of competitions that are held on International Women's Day, including:Exemplary Contest,Poster Competition</p>
+            
+        
+        <span class="price" color="black">learn more</span>
+        <i class='bx bx-shopping-bag add-cart' ></i>
+      </div>
+       <!-- box 1 -->
+       <div class="product-box">
+  
+        <img src="sap8.jfif" alt="" class="product-img">
+        <h2 class="product-title"><b><center>Rangoli</b></center></h2>
+            <p>Rangoli competitions are a way to celebrate Indian art and culture, and to promote creativity, teamwork, and collaboration. Some objectives of rangoli competitions</p>
+        
+        <span class="price" color="black">learn more</span>
+        <i class='bx bx-shopping-bag add-cart' ></i>
+      </div>
+  
+</section>
+
+
+
+
+
+
+
+<section id="Contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-12">
+        
+        <img src="feed.jfif" class="img-fluid">
+      </div>
+      <div class="col-lg-6 col-md-6 col-12">
+        <h1>Student FeedBack Form</h1>
+        <form action="/data" method="POST">
+          <label for="name">Enter Your Name:</label>
+          <input type="text" id="name" class="form-control" placeholder="Enter Your Name">
+
+          <label for="email">Enter Your PhoneNumber:</label>
+          <input type="text" id="email" class="form-control" placeholder="Enter Your Number">
+
+          <label for="message">Enter your Message:</label>
+          <textarea id="message" class="form-control" placeholder="Enter your Message"></textarea>
+
+          <button class="btn-signin" type="submit">Send Message</button>
+        </form>
+        
+       
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<footer class="fot">
+ <h2> CopyRight@swechai.in 2024</h2>
+</footer>
+
+
+</body>
+
+</html>
